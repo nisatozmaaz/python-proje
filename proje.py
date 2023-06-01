@@ -7,7 +7,13 @@ def üye_ol():
 def giriş_yap():
     input("Kullanıcı adınızı giriniz: ")
     input("Şifrenizi giriniz: ")
-    print("Başarılı giriş yapılmıştır...\n")
+    input("1.Gaziantep\n2.Kahramanmaraş\n3.Hatay\n4.Adana\n5.Diyarbakır\nİlinizi giriniz: ")            
+    print("Bulunduğunuz ildeki yardım yoğunluğunun olduğu ilçeler listelenmiştir...\n ")
+    
+    #pandas kütüphanesi yardımıyla gerekli ihtiyaçların olduğu excel tablomu okuttum:
+    import pandas as pd
+    df = pd.read_excel('ihtiyaç.xlsx')
+    print(df)
     
     
 def şifre_değişimi():
